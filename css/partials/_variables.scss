@@ -1,0 +1,23 @@
+//----- Column Vars -----//
+$gutter-padding: 15px; // Col gutter pad size.
+$num-cols: 12; // Total num cols.
+//----- /End Column Vars/ -----//
+
+//----- Grid Breakpoint sizes -----//
+$grid-xs: 576px; // less than
+$grid-sm: 576px; // greater than equal to;
+$grid-md: 768px; // ''
+$grid-lg: 992px; // ''
+$grid-xl: 1200px;
+// Set max screen size.
+$grid-screen-max: 1440px;
+//----- /End Grid Screen sizes/ -----//
+
+//----- Grid Screen Sizes -----//
+$gutter-width: $gutter-padding * 2;
+$container-mobile: ($grid-sm - $gutter-width);
+$container-mobile-lg: ($grid-md - $gutter-width);
+$container-tablet: ($grid-lg - $gutter-width);
+$container-desktop: ($grid-xl - $gutter-width);
+$container-desktop-lg: ($grid-screen-max - $gutter-width);
+//----- /Grid Screen Sizes -----//

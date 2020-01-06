@@ -1,0 +1,26 @@
+//----- Grid/col initialization partial -----//
+
+.row { 
+  @include makerow;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+// Create base styles for all cols.
+@include generate-grid-cols;
+
+@media screen and (min-width: $grid-sm) {
+  @include init-grid(xs);
+}
+@media screen and (min-width: $grid-md) {
+  @include init-grid(sm);
+}
+@media screen and (min-width: $grid-lg) {
+  @include init-grid(md);
+}
+@media screen and (min-width: $grid-xl) {
+  @include init-grid(lg);
+}
+@media screen and (min-width: $grid-screen-max) {
+  @include init-grid(xl);
+}
+//----- /Grid/col initialization partial/ -----//

@@ -1,0 +1,62 @@
+//----- Mixins Sheet -----//
+
+// Creates .row styles.
+@mixin makerow() {
+  @include clearfix;
+}
+// Generates default grid col styles; 
+@mixin generate-grid-cols($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}, .col-xl-#{$i}") {
+  @for $i from (1 + 1) through $num-cols {
+    $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}, .col-xl-#{$i}";
+  }
+  #{$list} {
+    width: 100%;
+    float: none;
+    position: relative;
+    min-height: 1px;
+    padding-left: $gutter-padding;
+    padding-right: $gutter-padding;
+  }
+}
+// Generates Base styles for all columns on all screen sizes.
+@mixin generate-grid-col-floats($class, $i: 1, $list: ".col-#{$class}-#{$i}") {
+  @for $i from (1 + 1) through $num-cols {
+    $list: "#{$list}, .col-#{$class}-#{$i}";
+  }
+  #{$list} {
+    float: left;
+  }
+}
+//  Calculates column sizes for a given class & index.
+//  (If we wanted to add things like offsets and pulls, 
+//   we would have to implement conditionals here.)
+@mixin calc-grid-col-size($index, $class) {
+
+  .col-#{$class}-#{$index} {
+    width: percentage(($index / $num-cols));
+  }
+}
+// loops through cols and calculates col widths.
+@mixin col-grid-loop($class) {
+  @for $i from 1 through $num-cols {
+    @include calc-grid-col-size($i, $class);
+  }
+}
+//  initializes the grid system for a given class, 
+//  and adds base floats to all classes. 
+//  eg(xs, sm, md, lg, xl);
+@mixin init-grid($class) {
+  @include generate-grid-col-floats($class);
+  @include col-grid-loop($class);
+}
+
+
+@mixin fixed-container { 
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: $gutter-padding;
+  padding-right: $gutter-padding;
+  @include clearfix;
+}
+
+//----- /End Mixins Sheet/ -----//

@@ -1,0 +1,36 @@
+// imports 
+@import "partials/reset";
+@import "partials/clearfix";
+@import "partials/functions";
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/grid-init";
+
+* {
+  box-sizing: border-box;
+}
+.container-wide {
+  @include fixed-container;
+  width: 100%;
+}
+
+.container { 
+  @include fixed-container;
+  width: 100%;
+
+  @media (min-width: $grid-sm) {
+    max-width: $container-mobile;
+  }
+  @media (min-width: $grid-md) {
+    max-width: $container-mobile-lg;
+  }
+  @media (min-width: $grid-lg) {
+    max-width: $container-tablet;
+  }
+  @media (min-width: $grid-xl) {
+    max-width: $container-desktop;
+  }
+  @media (min-width: $grid-screen-max) {
+    max-width: $container-desktop-lg;
+  }
+}

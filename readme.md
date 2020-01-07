@@ -79,5 +79,5 @@ Armin.
 
 ## Todos 
 
-- [] Create a sample html page /example/index.html with various examples of col spreads.
-- [] elaborate on the system and include offsets and pull/pushes. 
+- [ ] Create a sample html page /example/index.html with various examples of col spreads.
+- [ ] elaborate on the system and include offsets and pull/pushes. 

@@ -52,3 +52,13 @@ Class | Behaviour | Usage
 .container-wide | Full with container | Used to contain rows
 .row | Applies a clearfix, and negative margins to compensate for row padding | Used to contain cols and is a child of containers
 .col-{size}-* | Takes up the assigned number of columns until break point size is reached, then collapses to stacked full-width columns | Used to contain and layout content
+
+### Breakpoints
+Breakpoint | Screen Size | Variable Name |   
+---------- | ----------- | ------------- |
+ <576px    | mobile-sm   | $grid-xs      |
+ \>576px   | mobile-lg   | $grid-sm      |
+ \>768px   | tablet      | $grid-md      |
+ \>992px   | tablet-lg   | $grid-lg      |
+ \>1200px  | desktop     | $grid-xl      | 
+ \>1440px  | desktop-lg  | $grid-screen-max |

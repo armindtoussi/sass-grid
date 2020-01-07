@@ -75,3 +75,9 @@ If you have any suggestions or corrections, fork and issue a pull request or cre
 Thank you 
 
 Armin.
+
+
+## Todos 
+
+- [] Create a sample html page /example/index.html with various examples of col spreads.
+- [] elaborate on the system and include offsets and pull/pushes. 

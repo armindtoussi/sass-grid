@@ -34,12 +34,12 @@ This will result in 2 columns of size 6 at larger screens or higher. When the sc
 
 You can play around with column configurations and see what you can create.
 
-#### Containers 
+### Containers 
 Containers are built to contain rows and help control break points. There are 2 types of container. The standard `.container` or the full-width container `.container-wide`.  `.container` offers content centering and margin around the content based on screen size, and `.container-wide` offers a full-width fluid container. 
 
 It is recommended that at least 1 container class is used as a parent to a row class. 
 
-#### Rows 
+### Rows 
 Rows are built to contain column classes. They have a negative margin on the left and right to compensate for padding of cols and containers. They are also given the clearfix as provided by [Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) in order to compensate for floats using in column classes.  
 
 Rows are to be nested inside a container class, and that rows wrap around column classes in order for the grid-system to work correctly. 

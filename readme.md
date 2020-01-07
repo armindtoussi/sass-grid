@@ -9,7 +9,7 @@ There are some things that I opted out of doing for the time being such as colum
 ### How to Use
 What we have here is a 12 column grid system that is build using media queries with corresponding screen sizes (#see below link). This system follows the model of having a container, and nesting rows within, and then nesting columns within the rows. I have opted to go with the `col-{size}-*` based class usage that Bootstrap uses because if it isn't broken, don't fix it. 
 ### Columns
-All col classes start with `col-` and in the `{size}` goes the size. sizes include: 
+All col classes start with `col-` and in the `{size}` portion goes the size, and sizes include: 
 * xs - extra small screens
 * sm - small screens
 * md - medium screens
@@ -17,14 +17,22 @@ All col classes start with `col-` and in the `{size}` goes the size. sizes inclu
 * xl - extra large screens 
 For more information on screen sizes see below(add a link here).
 
-For the * section of `col-{size}-*`, you must include a number, and to avoid undefined behaviour, all cols should add up to 12 as this is a 12 column system.  
+For the `*` section of `col-{size}-*`, you must include a number, and to avoid undefined behaviour, all cols should add up to 12 as this is a 12 column system.  
 
 Example: 
 ```HTML
 <div class="col-sm-6">content</div>
 <div class="col-sm-6">content</div>
 ```
-This will result in 2 columns of size 6 (or half the screen) that would collapse in to stacked full-width columns at small screen sizes. 
+This will result in 2 columns of size 6 (or half the screen) that would collapse in to stacked full-width columns at small screen sizes.
+Much like other grid systems, we can combine column classes to get different behaviour at different screen sizes. 
+```HTML
+<div class="col-lg-6 col-md-4 col-sm-6"></div>
+<div class="col-lg-6 col-md-4 col-sm-6"></div>
+```
+This will result in 2 columns of size 6 at larger screens or higher. When the screen size hits the medium breakpoint, it will turn into 2 columns of size 4 and when the screen size hits the small breakpoint, it will turn into 2 columns of size 6, until it hits the extra small screen size break point upon which all columns will stack. 
+
+You can play around with column configurations and see what you can create.
 
 #### Containers 
 

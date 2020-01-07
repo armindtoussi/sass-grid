@@ -1,20 +1,23 @@
-// imports 
+//----- Imports -----//
 @import "partials/reset";
 @import "partials/clearfix";
-@import "partials/functions";
 @import "partials/variables";
 @import "partials/mixins";
 @import "partials/grid-init";
+//----- /Imports/ -----//
+
 
 * {
   box-sizing: border-box;
 }
+
+//----- Container styles -----//
+// Full Width Container
 .container-wide {
   @include fixed-container;
-  width: 100%;
-  
+  width: 100%; 
 }
-
+// Container centered with gutters around content.
 .container { 
   @include fixed-container;
   width: 100%;
@@ -35,3 +38,4 @@
     max-width: $container-desktop-lg;
   }
 }
+//----- /Container styles/ -----//

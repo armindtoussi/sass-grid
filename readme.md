@@ -5,4 +5,12 @@ After having recently learned Sass, I wanted to build a project using my new kno
 
 There are some things that I opted out of doing for the time being such as column offsets and column pulls. 
 ###### Note - this is not properly tested nor would I say it is ready for production. Use with caution.
+
 ### How to Use
+
+I have opted to go with the col-* based class usage that Bootstrap uses because if it isn't broken, don't fix it. 
+
+### Grid Classes
+
+Class | Behaviour
+----- | ---------

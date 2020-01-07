@@ -7,9 +7,9 @@ There are some things that I opted out of doing for the time being such as colum
 ###### Note - this is not properly tested nor would I say it is ready for production. Use with caution.
 
 ### How to Use
-What we have here is a 12 column grid system that is build using media queries with corresponding screen sizes (#see below link). This system follows the model of having a container, and nesting rows within, and then nesting columns within the rows. I have opted to go with the ```col-{size}-*``` based class usage that Bootstrap uses because if it isn't broken, don't fix it. 
-
-All col classes start with ```col-``` and in the ```{size}``` goes the size. sizes include: 
+What we have here is a 12 column grid system that is build using media queries with corresponding screen sizes (#see below link). This system follows the model of having a container, and nesting rows within, and then nesting columns within the rows. I have opted to go with the `col-{size}-*` based class usage that Bootstrap uses because if it isn't broken, don't fix it. 
+### Columns
+All col classes start with `col-` and in the `{size}` goes the size. sizes include: 
 * xs - extra small screens
 * sm - small screens
 * md - medium screens
@@ -17,10 +17,10 @@ All col classes start with ```col-``` and in the ```{size}``` goes the size. siz
 * xl - extra large screens 
 For more information on screen sizes see below(add a link here).
 
-For the * section of ```col-{size}-*```, you must include a number, and to avoid undefined behaviour, all cols should add up to 12 as this is a 12 column system.  
+For the * section of `col-{size}-*`, you must include a number, and to avoid undefined behaviour, all cols should add up to 12 as this is a 12 column system.  
 
 Example: 
-```
+```HTML
 <div class="col-sm-6">content</div>
 <div class="col-sm-6">content</div>
 ```
